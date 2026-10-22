@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Message For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- STAGE 1: Did I do something wrong? -->
+    <div id="stage-1">
+      <div class="gif-container">
+        <!-- Fixed working GIF link -->
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWZ5a3N3Znd5cTNreTZibDZvczM2eWJ4eWJ4eWJ4eWJ4eWJ4eWJmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriO0OEd9QIDdllqo/giphy.gif" alt="Cute Bear Asking">
+      </div>
+      
+      <h1>Did I do something wrong? 🥺</h1>
+
+      <div class="btn-group">
+        <button onclick="handleWrongAnswer('yes')">YES</button>
+        <button onclick="handleWrongAnswer('no')">NO</button>
+      </div>
+    </div>
+
+    <!-- STAGE 2A: IF SHE CLICKED 'YES' -->
+    <div id="stage-yes" class="hidden">
+      <div class="gif-container">
+        <!-- Fixed working GIF link -->
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXlqb2J5a3N3Znd5cTNreTZibDZvczM2eWJ4eWJ4eWJ4eWJ4eWJ4eWJmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9xyS3yNcm1Kk/giphy.gif" alt="Sad Panda">
+      </div>
+
+      <h1>I am so sorry... ❤️</h1>
+      <p id="custom-yes-text">
+        I know I messed up and made you feel bad. You mean everything to me and I hate seeing you upset because of me. 
+        <br><br>
+        Can we please fix this? Do you forgive me? 👉👈
+      </p>
+
+      <div class="btn-group" id="forgive-buttons">
+        <button onclick="handleForgive()">YES, I forgive you ❤️</button>
+        <button id="no-btn" class="btn-no-runaway" onmouseover="moveNoButton()" onclick="moveNoButton()">NO 😜</button>
+      </div>
+    </div>
+
+    <!-- STAGE 2B: IF SHE CLICKED 'NO' -->
+    <div id="stage-no" class="hidden">
+      <div class="gif-container">
+        <!-- Fixed working GIF link -->
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWZ5a3N3Znd5cTNreTZibDZvczM2eWJ4eWJ4eWJ4eWJ4eWJ4eWJmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" alt="Happy Dance">
+      </div>
+
+      <h1>Phew! What a relief! 🎉</h1>
+      <p id="custom-no-text">
+        I was getting so nervous! But wait... even if nothing is wrong, I still owe you a date night and lots of hugs! ❤️
+      </p>
+
+      <button onclick="showSuccessStage()">Claim your reward anyway 🎁</button>
+    </div>
+
+    <!-- STAGE 3: SUCCESS / FORGIVEN STAGE -->
+    <div id="stage-success" class="hidden">
+      <div class="gif-container">
+        <!-- Fixed working GIF link -->
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWZ5a3N3Znd5cTNreTZibDZvczM2eWJ4eWJ4eWJ4eWJ4eWJ4eWJmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2vSk4f18F92f2/giphy.gif" alt="Love Hug">
+      </div>
+
+      <h1>YAY! BEST DAY EVER! 🥰</h1>
+      <p>Thank you for being so patient with me. I love you so much!</p>
+
+      <div class="coupon-card">
+        <h3>🎟️ Redeemable Coupon</h3>
+        <p>Valid for 1x Unlimited Kisses + Ice Cream Date of your choice!</p>
+      </div>
+
+      <button onclick="location.reload()">Replay Message 🔄</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
